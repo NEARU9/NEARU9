@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="music.css">    
+    <script src="music-player.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="shortcut icon" type="icon" href="Nearu.png">
+
+    <title>Nearu</title>
+</head>
+
+<body>
+    <!-- NavBar -->
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#" class="nav-btn active">WELCOME</a></div>
+            <ul class="links">
+                <li><a href="#" class="nav-btn">ABOUT</a></li>
+                <li><a href="#" class="nav-btn">EVENT</a></li>
+                <!-- <li><a href="#" class="nav-btn">TOKENOMIC</a></li> -->
+                <li><a href="" class="twitter-link" target="_blank"><i
+                        class="fab fa-x"></i></a></li>
+                <li><a href="" class="telegram-link"
+                        target="_blank"><i class="fab fa-telegram"></i></a></li>
+
+            </ul>
+        </div>
+    </header>
+
+    <!-- Slide -->
+    <section class="home">
+        <div class="background active bg1"></div>
+        <div class="background bg2"></div> <!-- Div untuk background kedua -->
+        <div class="background bg3"></div>
+        <img class="background" src="background4.gif">
+    </section>
+    
+
+    <!-- Content Home -->
+    <div class="content active">
+        <div class="hero">
+            <div class="hero-text">
+                <h1 class="namatoken" style="color: white;">$NEARU</h1>
+                <h3 class="bergerak" style="color: white;"><span style="color: purple;" class="input1"></span></h3>
+                <p style="color: white;"></p>
+            </div>
+            <img class="fotoUtama" src="Nearu.png" alt="">
+
+            <!-- hpdisplay -->
+            <h4 class="hpdisplay" style="color: white;">"The King Of Cats From The Shedow." </h4>
+            <hp class="hpdisplay" style="color: white;">About</hp>
+            <p class="hpdisplay" >In the unseen labyrinth of power, an unexpected creature has found a way to control the world with extraordinary intelligence. An experimental cat that escaped from the elite lab on Mars, known as the "White Room," has transformed into the orchestrator of hidden agendas in the global game. With cutting-edge technology and loyal agents operating in the shadows, it has sparked waves of revolution without a trace, toppling corrupt regimes and establishing a new government loyal to its vision.</p>
+            <li><a href="" class="hpdisplaylink1" target="_blank"><i class="fab fa-x"></i></a></li>
+            <li><a href="" class="hpdisplaylink2" target="_blank"><i class="fab fa-telegram"></i></a></li>
+        </div>
+    </div>
+
+    <!-- Content About -->
+    <div class="content">
+        <div class="about1">
+            <img class="fotoProfil" src="img.png" alt="">
+
+            <div class="nama">
+                <div class="tentang">
+                    <h1 style="color: white;">$NEARU</h1>
+                    <p style="color: white;">In the unseen labyrinth of power, an unexpected creature has found a way to control the world with extraordinary intelligence. An experimental cat that escaped from the elite lab on Mars, known as the "White Room," has transformed into the orchestrator of hidden agendas in the global game. With cutting-edge technology and loyal agents operating in the shadows, it has sparked waves of revolution without a trace, toppling corrupt regimes and establishing a new government loyal to its vision.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="about2">
+            <h1 style="font-family: minecraft;" class="input2"></h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="about3">
+
+        </div>
+    </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Nearu. All rights reserved.</p>
+        </footer>
+
+    <script>
+        //Gerak 
+        var typed = new Typed(".input1", {
+        strings: ["The King Of Cats From The Shedow."],
+        typeSpeed: 70,
+        backSpeed: 65,
+        loop: true
+        }) 
+        var typed = new Typed(".input2", {
+        strings: ["Coming Soon.", "Join our Telegram for more information."],
+        typeSpeed: 70,
+        backSpeed: 65,
+        loop: true
+        })
+
+        // Navigasi
+        const btns = document.querySelectorAll(".nav-btn")
+        const slides = document.querySelectorAll(".background")
+        const contents = document.querySelectorAll(".content")
+
+        var sliderNav = function (manual) {
+            btns.forEach((btn) => {
+                btn.classList.remove("active")
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active")
+            });
+
+            contents.forEach((content) => {
+                content.classList.remove("active")
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            });
+        });
+
+        // supaya img tidak dapat di tarik
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const images = document.querySelectorAll('img');
+            images.forEach((img) => {
+                img.ondragstart = () => {
+                    return false;
+                };
+            });
+        });
+    </script>
+</body>
+
+</html>
