@@ -77,18 +77,22 @@ header{
     font-family: 'Bernard MT Condensed';
 }
 
+.nav-link{
+    font-family: 'Bernard MT Condensed';
+}
+
 .nav-btn.active{
     background-color: #D40000;
 }
 
-.twitter-link{
+.github-link{
     padding: 0.33rem 1.3rem;
     color: black;
 }
 
-.telegram-link{
+.linkedin-link{
     padding: 0.33rem 1.3rem;
-    color: #0088cc;
+    color: black;
 }
 
 /* Background */
@@ -323,8 +327,7 @@ footer {
     .about2,
     .about3,
     .tentang h1,
-    .tentang p,
-    .container {
+    .tentang p {
         display: none;
     }
 
@@ -376,18 +379,24 @@ footer {
         
     }
 
+    .container {
+        display: flex;
+        gap: 1rem; 
+    }
+
     .hpdisplaylink1,
     .hpdisplaylink2 {
         display: inline-block;
         padding: 0.33rem 1.3rem;
-    }
-    
-    .hpdisplaylink1 {
         color: black;
+        font-family: 'Bernard MT Condensed';
     }
     
-    .hpdisplaylink2 {
-        color: #0088cc;
+    /* Tambahkan clearfix untuk kontainer */
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
     }
 
     footer {
